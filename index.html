@@ -3,81 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaac Geers - Técnico de Sistemas y Operaciones IT</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <title>Isaac Geers – Monitorización y Operación IT</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
         :root {
-            --sidebar-bg: #1e293b;
-            --accent: #3b82f6;
-            --text-main: #334155;
-            --bg-page: #f8fafc;
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --text: #334155;
+            --bg: #f1f5f9;
+            --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-page); color: var(--text-main); display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 40px 20px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-        .cv-container {
-            width: 100%;
-            max-width: 950px;
-            background: #fff;
+        .cv-card {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
             display: grid;
             grid-template-columns: 320px 1fr;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             overflow: hidden;
         }
 
-        /* Lateral Azul */
-        .sidebar { background: var(--sidebar-bg); color: white; padding: 40px 30px; }
-        .sidebar h1 { font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 8px; letter-spacing: -0.5px; }
-        .sidebar .role { color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 40px; line-height: 1.3; }
-        
-        .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
-        
-        .contact-item { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 10px; display: block; text-decoration: none; }
-        
-        .skills-list { list-style: none; margin-top: 30px; }
-        .skills-list li { font-size: 0.85rem; margin-bottom: 12px; color: #cbd5e1; line-height: 1.4; }
+        .sidebar {
+            background: var(--primary);
+            color: white;
+            padding: 40px 30px;
+        }
 
-        /* Contenido Blanco */
-        .main-content { padding: 50px; }
-        .section-title { font-size: 1.1rem; font-weight: 700; color: var(--sidebar-bg); margin-bottom: 20px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
-        .perfil-p { font-size: 0.95rem; line-height: 1.6; text-align: justify; color: #475569; margin-bottom: 40px; }
+        .sidebar h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 1.2px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 5px;
+        }
 
-        .edu-item { margin-bottom: 20px; }
-        .edu-item h4 { font-size: 0.95rem; color: var(--sidebar-bg); font-weight: 700; }
-        .edu-item p { font-size: 0.85rem; color: #64748b; margin-top: 3px; }
-        .tag-ia { color: var(--accent); font-weight: 700; }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
 
-        @media (max-width: 800px) {
-            .cv-container { grid-template-columns: 1fr; }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            color: #cbd5e1;
+            line-height: 1.3;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .main {
+            padding: 50px;
+        }
+
+        .header {
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .education-section {
+            border-top: 2px solid #f1f5f9;
+            padding-top: 30px;
+        }
+
+        .edu-item {
+            margin-bottom: 20px;
+        }
+
+        .edu-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .edu-desc {
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .certs {
+            font-style: italic;
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 850px) {
+            .cv-card { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<div class="cv-container">
+<div class="cv-card">
+
     <aside class="sidebar">
-        <h1>ISAAC<br>GEERS</h1>
-        <p class="role">Técnico de Sistemas y Operaciones IT</p>
+        <h1 style="font-size: 1.8rem; line-height: 1; margin-bottom: 10px;">
+            ISAAC<br>GEERS
+        </h1>
+        <p style="color: #94a3b8; font-size: 0.9rem;">
+            Monitorización y Operación IT
+        </p>
 
         <h2>Contacto</h2>
-        <div class="contact-item">igsala@gmail.com</div>
-        <div class="contact-item">+34 693 597 756</div>
-        <div class="contact-item">Valencia, España</div>
+        <a href="mailto:igsala@gmail.com" class="contact-link">
+            <i data-lucide="mail" size="16"></i> igsala@gmail.com
+        </a>
+        <a href="tel:+34693597756" class="contact-link">
+            <i data-lucide="phone" size="16"></i> +34 693 597 756
+        </a>
+        <div class="contact-link">
+            <i data-lucide="map-pin" size="16"></i> Valencia, España
+        </div>
 
-        <h2>Habilidades Clave</h2>
-        <ul class="skills-list">
-            <li>Monitorización y alertas (Zabbix, PRTG, NAGIOS)</li>
-            <li>Administración Linux y Windows</li>
-            <li>Redes (TCP/IP, LAN/WAN/WIFI)</li>
-            <li>Análisis de métricas, latencias y rendimiento</li>
-            <li>Automatización (Bash/Python)</li>
-            <li>Resolución de incidencias</li>
+        <h2>Competencias clave</h2>
+        <ul class="skill-list">
+            <li>Monitorización de sistemas y servicios IT</li>
+            <li>Supervisión de recursos (CPU, memoria, disco y red)</li>
+            <li>Análisis de métricas, alertas y estados de servicio</li>
+            <li>Detección temprana de saturaciones y degradaciones</li>
+            <li>Operación diaria en entornos con SLA</li>
+            <li>Experiencia práctica con Zabbix</li>
+            <li>Sistemas Linux</li>
+            <li>Fundamentos de redes y conectividad</li>
         </ul>
     </aside>
 
-    <main class="main-content">
+    <main class="main">
+
+        <header class="header">
+            <h1>Isaac Geers</h1>
+            <p>Monitorización y Operación IT</p>
+        </header>
+
+        <section class="section">
+            <h3><i data-lucide="activity"></i> Resumen profesional</h3>
+            <p>
+                Profesional IT orientado a la monitorización y operación diaria de sistemas y servicios.
+                Experiencia en la supervisión de recursos críticos y en la interpretación de métricas y
+                alertas como indicadores del estado de los sistemas.
+            </p>
+            <p style="margin-top:10px;">
+                Enfoque práctico basado en la detección temprana de degradaciones de rendimiento,
+                anticipación de escenarios de saturación y actuación preventiva antes de que el
+                servicio se vea afectado, contribuyendo a la continuidad operativa y al cumplimiento
+                de los niveles de servicio.
+            </p>
+        </section>
+
+        <section class="section">
+            <h3><i data-lucide="user"></i> Perfil profesional</h3>
+            <p>
+                Perfil técnico centrado en la monitorización de sistemas y servicios en entornos
+                críticos. Acostumbrado a trabajar con paneles de monitorización para validar el estado
+                de los servicios y analizar alertas como punto de partida del diagnóstico técnico.
+            </p>
+            <p style="margin-top:10px;">
+                La monitorización se concibe como una herramienta preventiva, orientada a mantener
+                los servicios operativos, identificar problemas antes de que provoquen una caída
+                y minimizar su impacto en usuarios y negocio.
+            </p>
+        </section>
+
+        <section class="education-section">
+            <h3>
+                <i data-lucide="graduation-cap" style="color:var(--accent)"></i>
+                Formación
+            </h3>
+
+            <div class="edu-item">
+                <div class="edu-title">
+                    Máster en Desarrollo de Inteligencia Artificial (en curso)
+                </div>
+                <div class="edu-desc">
+                    Enfocado a conceptos de IA aplicados a la eficiencia de sistemas y soporte operativo.
+                </div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">
+                    FP Grado Superior en Informática – Nivel III
+                </div>
+                <div class="edu-desc">
+                    Formación técnica superior en sistemas y tecnologías de la información.
+                </div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-title">Certificaciones</div>
+                <p class="certs">
+                    Prevención de Riesgos Laborales (60h)<br>
+                    Trabajos en Altura<br>
+                    MTCNA – MikroTik Certified Network Associate
+                </p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
