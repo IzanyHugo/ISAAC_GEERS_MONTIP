@@ -3,274 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <title>Isaac Geers – Monitorización y Operación IT</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+    <title>CV Isaac Geers - Senior IT & Infrastructure Engineer</title>
     <style>
-        :root {
-            --primary: #1e293b;
-            --accent: #2563eb;
-            --text: #334155;
-            --bg: #f1f5f9;
-            --white: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        .cv-card {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: var(--white);
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
-        .sidebar {
-            background: var(--primary);
-            color: white;
-            padding: 40px 30px;
-        }
-
-        .sidebar h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: #94a3b8;
-            letter-spacing: 1.2px;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 5px;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-        }
-
-        .skill-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skill-list li {
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            color: #cbd5e1;
-            line-height: 1.3;
-        }
-
-        .skill-list li::before {
-            content: "•";
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        .main {
-            padding: 50px;
-        }
-
-        .header {
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            font-size: 2.4rem;
-            color: var(--primary);
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .section {
-            margin-bottom: 35px;
-        }
-
-        .section h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section p {
-            font-size: 0.95rem;
-            text-align: justify;
-        }
-
-        .education-section {
-            border-top: 2px solid #f1f5f9;
-            padding-top: 30px;
-        }
-
-        .edu-item {
-            margin-bottom: 20px;
-        }
-
-        .edu-title {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1rem;
-        }
-
-        .edu-desc {
-            font-size: 0.9rem;
-            margin-top: 4px;
-        }
-
-        .certs {
-            font-style: italic;
-            color: #64748b;
-            font-size: 0.85rem;
-            margin-top: 5px;
-        }
-
-        @media (max-width: 850px) {
-            .cv-card { grid-template-columns: 1fr; }
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; background-color: #f4f4f4; }
+        .container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header { border-bottom: 3px solid #0056b3; padding-bottom: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        h1 { margin: 0; color: #0056b3; text-transform: uppercase; font-size: 28px; }
+        h2 { color: #0056b3; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; font-size: 20px; }
+        .contact-info { text-align: right; font-size: 0.9em; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 5px; }
+        .highlight-box { background: #eef6ff; border-left: 5px solid #0056b3; padding: 15px; margin: 20px 0; }
+        .tag { background: #0056b3; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.85em; display: inline-block; margin: 2px; }
     </style>
 </head>
 <body>
 
-<div class="cv-card">
-
-    <aside class="sidebar">
-        <h1 style="font-size: 1.8rem; line-height: 1; margin-bottom: 10px;">
-            ISAAC<br>GEERS
-        </h1>
-        <p style="color: #94a3b8; font-size: 0.9rem;">
-            Monitorización y Operación IT
-        </p>
-
-        <h2>Contacto</h2>
-        <a href="mailto:igsala@gmail.com" class="contact-link">
-            <i data-lucide="mail" size="16"></i> igsala@gmail.com
-        </a>
-        <a href="tel:+34693597756" class="contact-link">
-            <i data-lucide="phone" size="16"></i> +34 693 597 756
-        </a>
-        <div class="contact-link">
-            <i data-lucide="map-pin" size="16"></i> Oliva Valencia, España
-        </div>
-
-        <h2>Competencias clave</h2>
-        <ul class="skill-list">
-            <li>Monitorización de sistemas y servicios IT</li>
-            <li>Supervisión de recursos (CPU, memoria, disco y red)</li>
-            <li>Análisis de métricas, alertas y estados de servicio</li>
-            <li>Detección temprana de saturaciones y degradaciones</li>
-            <li>Operación diaria en entornos con SLA</li>
-            <li>Experiencia práctica con , PRTG, Zabbix, NAGIOS</li>
-            <li>Sistemas Linux/Windows</li>
-            <li>Fundamentos avanzados de redes y conectividad</li>
-        </ul>
-    </aside>
-
-    <main class="main">
-
-        <header class="header">
+<div class="container">
+    <header>
+        <div>
             <h1>Isaac Geers</h1>
-            <p>Monitorización y Operación IT</p>
-        </header>
+            <p style="font-size: 1.2em; font-weight: bold; color: #555; margin-top: 5px;">Senior IT & Infrastructure Engineer</p>
+        </div>
+        <div class="contact-info">
+            <p>📍 Valencia, España (Disponibilidad Quart de Poblet)</p>
+            <p>📧 igsala@gmail.com</p>
+            <p>📱 +34 693 597 756</p>
+        </div>
+    </header>
 
-        <section class="section">
-            <h3><i data-lucide="activity"></i> Resumen profesional</h3>
-            <p>
-                Profesional IT orientado a la monitorización y operación diaria de sistemas y servicios.
-                Experiencia en la supervisión de recursos críticos y en la interpretación de métricas y
-                alertas como indicadores del estado de los sistemas.
-            </p>
-            <p style="margin-top:10px;">
-                Enfoque práctico basado en la detección temprana de degradaciones de rendimiento,
-                anticipación de escenarios de saturación y actuación preventiva antes de que el
-                servicio se vea afectado, contribuyendo a la continuidad operativa y al cumplimiento
-                de los niveles de servicio.
-            </p>
-        </section>
+    <div class="highlight-box">
+        <strong>Perfil Profesional:</strong> Ingeniero de infraestructuras con más de 10 años de trayectoria[cite: 53, 58]. Experto en la administración de entornos críticos Windows/Linux, virtualización avanzada y gestión de servicios IT bajo acuerdos de nivel de servicio (SLA)[cite: 43, 48, 55]. Especialista en convertir arquitecturas complejas en sistemas eficientes mediante automatización y observabilidad.
+    </div>
 
-        <section class="section">
-            <h3><i data-lucide="user"></i> Perfil profesional</h3>
-            <p>
-                Perfil técnico centrado en la monitorización de sistemas y servicios en entornos
-                críticos. Acostumbrado a trabajar con paneles de monitorización para validar el estado
-                de los servicios y analizar alertas como punto de partida del diagnóstico técnico.
-                Así como del uso en comandos para los distintos SOs.
-            </p>
-            <p style="margin-top:10px;">
-                La monitorización se concibe como una herramienta preventiva, orientada a mantener
-                los servicios operativos, identificar problemas antes de que provoquen una caída
-                y minimizar su impacto en usuarios y negocio.
-            </p>
-        </section>
+    <h2>🛡️ Especialización Técnica (Experto)</h2>
+    <div class="grid">
+        <div>
+            <strong>Sistemas y Directorio Activo:</strong>
+            <ul>
+                <li>Gestión Experta de <strong>Windows Server 2016/2019/2022</strong>[cite: 44].</li>
+                <li>Diseño y mantenimiento de <strong>Active Directory</strong> (GPOs, DNS, Sitios y Servicios)[cite: 45].</li>
+                <li>Administración Avanzada de <strong>Linux (RedHat, Debian)</strong>[cite: 44, 58].</li>
+            </ul>
+        </div>
+        <div>
+            <strong>Infraestructura y Continuidad:</strong>
+            <ul>
+                <li>Virtualización con <strong>VMware vSphere</strong> (vCenter, Clústeres HA)[cite: 53].</li>
+                <li>Backup y recuperación ante desastres con <strong>Veeam Backup</strong>[cite: 47].</li>
+                <li>Redes e interconectividad: Certificación <strong>MTCNA</strong> (MikroTik)[cite: 25, 71].</li>
+            </ul>
+        </div>
+    </div>
 
-        <section class="education-section">
-            <h3>
-                <i data-lucide="graduation-cap" style="color:var(--accent)"></i>
-                Formación
-            </h3>
+    <div class="highlight-box" style="background: #fff8ee; border-left-color: #f39c12;">
+        <strong>🚀 Proyecto Destacado: Cluster Beowulf (HPC)</strong><br>
+        Diseño, implementación y mantenimiento de un clúster de computación paralela basado en arquitectura Beowulf. Gestión de comunicación MPI, optimización de latencia en red privada, sistemas de archivos distribuidos (NFS) y monitorización de rendimiento de nodos.
+    </div>
 
-            <div class="edu-item">
-                <div class="edu-title">
-                    Máster en Desarrollo de Inteligencia Artificial (en curso)
-                </div>
-                <div class="edu-desc">
-                    Enfocado a conceptos de IA aplicados a la eficiencia de sistemas y soporte operativo.
-                </div>
-            </div>
+    <h2>🛠️ Experiencia y Capacidades Senior</h2>
+    <ul>
+        <li><strong>Operaciones de CPD:</strong> Gestión integral de racks, cableado estructurado, hardware de servidores y control de averías[cite: 48].</li>
+        <li><strong>Automatización:</strong> Creación de soluciones mediante <strong>Python, Bash y PowerShell</strong> para la optimización de tareas recurrentes[cite: 14, 15, 60].</li>
+        <li><strong>Gestión Estratégica:</strong> Control de presupuestos, licencias de software y gestión de proveedores externos (Vendors)[cite: 48].</li>
+        <li><strong>Monitorización:</strong> Configuración de sistemas de alertas y métricas para garantizar la alta disponibilidad (SRE mindset)[cite: 7, 13, 18, 59].</li>
+    </ul>
 
-            <div class="edu-item">
-                <div class="edu-title">
-                    FP Grado Superior en Informática – Nivel III
-                </div>
-                <div class="edu-desc">
-                    Formación técnica superior en sistemas y tecnologías de la información.
-                </div>
-            </div>
+    <h2>🎓 Formación y Certificaciones</h2>
+    <ul>
+        <li><strong>Máster en Desarrollo de Inteligencia Artificial</strong> (En curso) - Aplicación de IA en operaciones IT y automatización inteligente[cite: 30, 63, 65].</li>
+        <li><strong>MTCNA</strong> - MikroTik Certified Network Associate[cite: 25, 71].</li>
+        <li><strong>FP Grado Superior en Informática</strong> - Nivel III[cite: 31, 66, 67].</li>
+        <li>Certificaciones en Prevención de Riesgos Laborales (60h) y Trabajos en Altura[cite: 26, 28, 69, 70].</li>
+    </ul>
 
-            <div class="edu-item">
-                <div class="edu-title">Certificaciones</div>
-                <p class="certs">
-                    Prevención de Riesgos Laborales (60h)<br>
-                    MTCNA – MikroTik Certified Network Associate
-                    CCNA (en curso)
-                </p>
-            </div>
-        </section>
-
-    </main>
+    <div style="margin-top: 30px; text-align: center;">
+        <span class="tag">Active Directory</span> <span class="tag">Linux Expert</span> <span class="tag">VMware</span> <span class="tag">Veeam</span> <span class="tag">Python</span> <span class="tag">Networking</span> <span class="tag">Cloud Fundamentals</span>
+    </div>
 </div>
-
-<script>
-    lucide.createIcons();
-</script>
 
 </body>
 </html>
-
